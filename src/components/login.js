@@ -10,7 +10,7 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:3001/api/auth/login', { email, password });
       sessionStorage.setItem('token', response.data.token);
-      setMessage('Login successful');
+      // setMessage('Login successful');
     } catch (error) {
       setMessage(error.response.data.error);
     }
